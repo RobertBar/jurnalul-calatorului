@@ -1,0 +1,13 @@
+.nav-bar {
+    background-color: $white;
+    padding: 20px 30px;
+    @include mq(xs) {
+        width: 100%;
+    }
+    @include mq(small) {
+        position: absolute;
+        top: 3%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}

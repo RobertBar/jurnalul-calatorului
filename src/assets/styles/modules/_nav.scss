@@ -1,0 +1,68 @@
+.nav {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    height: 100%;
+    align-items: center;
+    display: none;
+
+    @include mq(small) {
+        display: flex;
+    }
+
+    @include e(item) {
+        margin-left: 20px;
+        flex: 0 0 100%; 
+        text-align: center;
+
+        @include mq(small){
+            flex: 0 0 auto;
+        }
+
+        a {
+            font-size: em(18px);
+            color: $color-primary;
+        }
+        a:hover {
+            color: palette(grey, dark);
+        }
+    }
+}
+
+.menu-icon {
+    position: relative;
+    @include mq(xs) {
+        height: 40px;
+        span {
+            position: absolute;
+            top: 20px;
+            display: inline-block;
+            width: 30px;
+            height: 3px;
+            background-color: $color-primary;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 10px;
+                display: inline-block;
+                width: 30px;
+                height: 3px;
+                background-color: $color-primary;    
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                top: -10px;
+                display: inline-block;
+                width: 30px;
+                height: 3px;
+                background-color: $color-primary;   
+            }
+        }
+    }
+
+    @include mq(small) { 
+        display: none;
+    }
+}

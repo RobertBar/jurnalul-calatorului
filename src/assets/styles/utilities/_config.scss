@@ -20,21 +20,12 @@ $font-weight--ultra-bold : 900;
 
 $white : #fff;
 $black : #0b0b0b;
-$grey  : #797e83;
-
-$fountain-blue  : #52bab3;
-$emerald        : #5ece7f;
-$sunglo         : #e67478;
-$coral          : #ff784f;
-$purple-majesty : #9279c3;
-$scooter        : #39add1;
+$grey  : #353535;
 
 // Color Usage
 
-$color-primary   : $fountain-blue;
-$color-secondary : $scooter;
-$color-accent    : $emerald;
-$color-shadow    : rgba($black, .2);
+$color-primary   : $grey;
+$color-secondary : $white;
 
 // Color Palette Modifiers
 
@@ -52,16 +43,6 @@ $color-palettes: (
 		base     : $black,
 		dark     : darken($black, 10%)
 	)
-);
-
-// UI Colors
-
-$ui-colors: (
-	default : $fountain-blue,
-	success : $emerald,
-	error   : $sunglo,
-	warning : $coral,
-	info    : $purple-majesty
 );
 
 // Text
@@ -84,6 +65,6 @@ $trns-duration  : .3s;
 $path--rel      : "../img";
 
 
-$brkpoint-sm : 1px;
-$brkpoint-md : 768px;
-$brkpoint-lg : 1100px;
+$brkpoint-sm : 48em;
+$brkpoint-md : 64em;
+$brkpoint-lg : 48em;
