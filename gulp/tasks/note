@@ -1,9 +1,0 @@
-gulp
-gulp-watch
-gulp-sass
-gulp-sourcemaps
-browser-sync
-webpack
-gulp-svg-sprite
-gulp-rename
-del
