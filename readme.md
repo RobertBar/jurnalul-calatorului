@@ -1,1 +1,1 @@
-## Jurnalul Calatorului - it's a landing page for a future app and a pice of my portfolio
+## Jurnalul Calatorului - it's a landing page for a future app and a piece of my portfolio
