@@ -1,0 +1,6 @@
+.section {
+    @extend %secion-default;
+    @include m(padded){
+        @extend %section-padding;
+    }
+}
