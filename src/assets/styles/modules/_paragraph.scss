@@ -1,9 +1,17 @@
 .paragraph {
+    margin-bottom: em(15px);
+
     @include m(white) {
         color: white;
     }
-    @include m(md-container) {
+    @include m(lg-container) {
         width: 80%;
-        margin: 0 auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    @include m(md-container) {
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
