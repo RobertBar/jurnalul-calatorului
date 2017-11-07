@@ -1,0 +1,9 @@
+.paragraph {
+    @include m(white) {
+        color: white;
+    }
+    @include m(md-container) {
+        width: 80%;
+        margin: 0 auto;
+    }
+}

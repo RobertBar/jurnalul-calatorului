@@ -45,12 +45,14 @@
     <!-- Start of   -->
     <section>
         <picture>
-            <img class="background-cover-img" src="assets/images/hero-area.bg.jpg" alt="">
+            <source srcset="assets/images/hero-area.bg.jpg 1200w" media="(min-width: 960px)">
+                <source srcset="assets/images/hero-area-bg-medium.jpg 600w" media="(min-width: 520px)">
+            <img srcset="assets/images/hero-area-bg-small.jpg 400w" class="background__img">
         </picture>
-        <div class="container">
+        <div class="background__container container">
             <div class="row">
                 <h1 class="col-xs-12 center-xs heading heading__primary heading__primary--large">traieste. captureaza. trimite</h1>
-                <p class="col-xs-12 center-xs">Acum e mai usor ca niciodata sa iti impartasesti momentele cu cei dragi</p>
+                <p class="col-xs-10 center-xs paragraph paragraph--md-container paragraph--white">Acum e mai usor ca niciodata sa iti impartasesti momentele cu cei dragi</p>
             </div>
         </div>
     </section>

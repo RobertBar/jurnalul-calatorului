@@ -1,0 +1,17 @@
+.heading {
+    text-transform: uppercase;
+
+    @include e(primary) {
+        font-size: 35px;
+        @include m(large) {
+            @include mq(small) {
+                font-size: 65px;
+            }
+            margin-top: 0;
+            margin-bottom: 0;
+            color: $white;
+        }
+    }
+
+
+}
