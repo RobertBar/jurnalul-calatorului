@@ -3,4 +3,11 @@
     @include m(padded){
         @extend %section-padding;
     }
+    @include m(extra-padded){
+        @extend %section-extra-padding;
+    }
+
+    @include m(grey) {
+        background-color: #f5f5f5;
+    }
 }
