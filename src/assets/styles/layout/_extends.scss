@@ -5,14 +5,16 @@
 // Panel
 
 %secion-default {
-  padding-top: em(50px);
+  padding-top: em(35px);
+  padding-bottom: em(35px);
   @include mq(medium) {
-    padding-bottom: em(35px);
+    padding-bottom: em(50px);
   }
 }
 
 %section-padding {
   padding-top: em(60px);
+  padding-bottom: em(60px);
   @include mq(medium) {    
     padding-top: em(80px);
     padding-bottom: em(80px);
@@ -21,6 +23,7 @@
 
 %section-extra-padding {
   padding-top: em(80px);
+  padding-bottom: em(80px);
   @include mq(medium) {    
     padding-top: em(110px);
     padding-bottom: em(110px);
