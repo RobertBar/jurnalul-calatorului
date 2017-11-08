@@ -18,4 +18,8 @@
             color: $white;
         }
     }
+
+    @include m(p-relative) {
+        position: relative;
+    }
 }
