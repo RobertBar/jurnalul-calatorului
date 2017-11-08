@@ -1,0 +1,16 @@
+.btn {
+    padding: 10px 20px;
+    text-transform: uppercase;
+    background-color: $white; 
+    border: 1px solid $color-primary;
+
+    @include m(large) {
+        padding: 15px 25px;
+    }
+
+    @include m(form-news) {
+        background-color: transparent;
+        border-color: #f7941d;
+        font-weight: $font-weight--bold;
+    }
+}

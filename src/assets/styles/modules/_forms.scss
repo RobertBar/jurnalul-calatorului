@@ -1,0 +1,12 @@
+.form {
+    @include e(input) {
+        background-color: #eaeaea;
+        border: 1px solid #eaeaea;
+        padding: em(15px) em(20px);
+        font-size: 14px;
+        line-height: 1.8;
+        font-weight: $font-weight--light;
+        margin-right: 10px;
+        margin-bottom: 15px;
+    }
+}
