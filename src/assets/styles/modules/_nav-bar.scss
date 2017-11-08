@@ -11,4 +11,10 @@
         left: 50%;
         transform: translateX(-50%);
     }
+    @include m(full-darker) {
+        position: fixed;
+        top: 0;
+        z-index: 10;
+        box-shadow: 0 2px 12px -2px gray;
+    }
 }

@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -10325,112 +10325,6 @@ return jQuery;
 
 /***/ }),
 /* 1 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__modules_MobileMenu__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__modules_SmoothScroll__ = __webpack_require__(3);
-
-
-
-
-var mobileMenu = new __WEBPACK_IMPORTED_MODULE_1__modules_MobileMenu__["a" /* default */]();
-var smoothScroll = new __WEBPACK_IMPORTED_MODULE_2__modules_SmoothScroll__["a" /* default */]();
-
-/***/ }),
-/* 2 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
-
-
-class MobileMenu {
-    constructor() {
-        this.menuIcon = __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.menu-icon');
-        this.menuContent = __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.nav');
-        this.events();
-    }
-
-    events() {
-        this.menuIcon.click(this.toggleMenu.bind(this));
-    }
-
-    toggleMenu() {
-        this.menuContent.toggleClass("nav--is-visible");
-        this.menuIcon.toggleClass("menu-icon--close");
-    }
-
-}
-
-/* harmony default export */ __webpack_exports__["a"] = (MobileMenu);
-
-/***/ }),
-/* 3 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_waypoints_lib_noframework_waypoints__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_waypoints_lib_noframework_waypoints___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__node_modules_waypoints_lib_noframework_waypoints__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery_smooth_scroll__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery_smooth_scroll___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_jquery_smooth_scroll__);
-
-
-
-
-class SmoothScroll {
-    constructor() {
-        this.pageSection = __WEBPACK_IMPORTED_MODULE_0_jquery___default()('section');
-        this.headerLinks = __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.nav__item a');
-        this.createPageSectionWaypoints();
-        this.addSmoothScrolling();
-    }
-
-    addSmoothScrolling() {
-        this.headerLinks.smoothScroll();
-    }
-
-    createPageSectionWaypoints() {
-        var that = this;
-        this.pageSection.each(function () {
-            var currentPageSection = this;
-            new Waypoint({
-                element: currentPageSection,
-                handler: function (direction) {
-                    if (direction == "down") {
-                        var matchingHeaderLink = currentPageSection.getAttribute('data-matching-link');
-                        that.headerLinks.removeClass('is-current-link');
-                        __WEBPACK_IMPORTED_MODULE_0_jquery___default()(matchingHeaderLink).addClass(is - current - link);
-                    }
-                },
-                offset: "16%"
-            });
-
-            new Waypoint({
-                element: currentPageSection,
-                handler: function (direction) {
-                    if (direction == "up") {
-                        currentPageSection.getAttribute('data-matching-link');
-                        that.headerLinks.removeClass('is-current-link');
-                        __WEBPACK_IMPORTED_MODULE_0_jquery___default()(matchingHeaderLink).addClass('is-current-link');
-                    }
-                },
-                offset: "-40%"
-            });
-        });
-    }
-}
-
-/* harmony default export */ __webpack_exports__["a"] = (SmoothScroll);
-
-/***/ }),
-/* 4 */
 /***/ (function(module, exports) {
 
 /*!
@@ -11193,6 +11087,115 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 ;
 
 /***/ }),
+/* 2 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__modules_MobileMenu__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__modules_SmoothScroll__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__modules_StickyHeader__ = __webpack_require__(6);
+
+
+
+
+
+var mobileMenu = new __WEBPACK_IMPORTED_MODULE_1__modules_MobileMenu__["a" /* default */]();
+var smoothScroll = new __WEBPACK_IMPORTED_MODULE_2__modules_SmoothScroll__["a" /* default */]();
+var stickyHeader = new __WEBPACK_IMPORTED_MODULE_3__modules_StickyHeader__["a" /* default */]();
+
+/***/ }),
+/* 3 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
+
+
+class MobileMenu {
+    constructor() {
+        this.menuIcon = __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.menu-icon');
+        this.menuContent = __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.nav');
+        this.events();
+    }
+
+    events() {
+        this.menuIcon.click(this.toggleMenu.bind(this));
+    }
+
+    toggleMenu() {
+        this.menuContent.toggleClass("nav--is-visible");
+        this.menuIcon.toggleClass("menu-icon--close");
+    }
+
+}
+
+/* harmony default export */ __webpack_exports__["a"] = (MobileMenu);
+
+/***/ }),
+/* 4 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_waypoints_lib_noframework_waypoints__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_waypoints_lib_noframework_waypoints___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__node_modules_waypoints_lib_noframework_waypoints__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery_smooth_scroll__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery_smooth_scroll___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_jquery_smooth_scroll__);
+
+
+
+
+class SmoothScroll {
+    constructor() {
+        this.pageSections = __WEBPACK_IMPORTED_MODULE_0_jquery___default()('section');
+        this.headerLinks = __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.nav__item a');
+        this.createPageSectionWaypoints();
+        this.addSmoothScrolling();
+    }
+
+    addSmoothScrolling() {
+        this.headerLinks.smoothScroll();
+    }
+
+    createPageSectionWaypoints() {
+        var that = this;
+        this.pageSections.each(function () {
+            var currentPageSection = this;
+            new Waypoint({
+                element: currentPageSection,
+                handler: function (direction) {
+                    if (direction == "down") {
+                        var matchingHeaderLink = currentPageSection.getAttribute('data-matching-link');
+                        that.headerLinks.removeClass('is-current-link');
+                        __WEBPACK_IMPORTED_MODULE_0_jquery___default()(matchingHeaderLink).addClass('is-current-link');
+                    }
+                },
+                offset: "16%"
+            });
+
+            new Waypoint({
+                element: currentPageSection,
+                handler: function (direction) {
+                    if (direction == "up") {
+                        var matchingHeaderLink = currentPageSection.getAttribute('data-matching-link');
+                        that.headerLinks.removeClass('is-current-link');
+                        __WEBPACK_IMPORTED_MODULE_0_jquery___default()(matchingHeaderLink).addClass('is-current-link');
+                    }
+                },
+                offset: "-40%"
+            });
+        });
+    }
+}
+
+/* harmony default export */ __webpack_exports__["a"] = (SmoothScroll);
+
+/***/ }),
 /* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -11558,6 +11561,43 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 }));
 
 
+
+/***/ }),
+/* 6 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_waypoints_lib_noframework_waypoints__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_waypoints_lib_noframework_waypoints___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__node_modules_waypoints_lib_noframework_waypoints__);
+
+
+
+class StickyHeader {
+    constructor() {
+        this.siteHeader = __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.nav-bar');
+        this.headerTriggerElement = __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.nav-bar');
+        this.createHeaderWaypoint();
+    }
+
+    createHeaderWaypoint() {
+        var that = this;
+        new Waypoint({
+            element: this.headerTriggerElement[0],
+            handler: function (direction) {
+                if (direction == "down") {
+                    that.siteHeader.addClass('nav-bar--full-darker');
+                } else {
+                    that.siteHeader.removeClass('nav-bar--full-darker');
+                }
+            }
+
+        });
+    }
+}
+
+/* harmony default export */ __webpack_exports__["a"] = (StickyHeader);
 
 /***/ })
 /******/ ]);
