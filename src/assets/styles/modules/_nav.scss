@@ -11,6 +11,9 @@
     }
 
     @include e(item) {
+        @include mq(xs) {
+            padding: 15px;
+        }
         margin-left: 20px;
         flex: 0 0 100%; 
         text-align: center;
@@ -31,34 +34,39 @@
 
 .menu-icon {
     position: relative;
+    top: 10px;
     @include mq(xs) {
-        height: 40px;
-        span {
+        height: 30px;
+        @include e(middle) {
             position: absolute;
-            top: 20px;
+            top: 14px;
             display: inline-block;
             width: 30px;
             height: 3px;
             background-color: $color-primary;
+            transition: transform .3s ease-out;
+        }
 
-            &::before {
-                content: "";
-                position: absolute;
-                top: 10px;
-                display: inline-block;
-                width: 30px;
-                height: 3px;
-                background-color: $color-primary;    
-            }
-            &::after {
-                content: "";
-                position: absolute;
-                top: -10px;
-                display: inline-block;
-                width: 30px;
-                height: 3px;
-                background-color: $color-primary;   
-            }
+        @include e(top) {
+            content: "";
+            position: absolute;
+            top: 0px;
+            display: inline-block;
+            width: 30px;
+            height: 3px;
+            background-color: $color-primary;    
+            transition: transform .3s ease-out;
+        }
+
+        @include e(bottom) {
+            content: "";
+            position: absolute;
+            bottom: 0px;
+            display: inline-block;
+            width: 30px;
+            height: 3px;
+            background-color: $color-primary;  
+            transition: transform .3s ease-out; 
         }
     }
 

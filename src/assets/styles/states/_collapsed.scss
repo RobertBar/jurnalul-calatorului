@@ -2,12 +2,27 @@
 // Collapsed
 // ==========================================================================
 
-.is-collapsed-mobile {
-    @include mq(small) {
-        visibility: collapse;
-        padding: 0;
-        height: 0;
-        margin: 0;
-        line-height: 0;
+.nav--is-visible {
+    @include mq(xs) {
+        display: block;
+    }
+}
+
+
+.menu-icon--close {
+
+    .menu-icon__top  {
+        transform: rotate(45deg) scaleX(1.2);
+        transform-origin: 0 100%;
+    }
+    
+    .menu-icon__middle {
+        opacity: 0;
+        transform: scaleX(0);
+    }
+    
+    .menu-icon__bottom {
+        transform: rotate(-45deg) scaleX(1.2) ;
+        transform-origin: 0 0;
     }
 }
