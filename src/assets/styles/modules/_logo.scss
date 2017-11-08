@@ -1,0 +1,7 @@
+.logo {
+    @include m(footer-img) {
+        margin-bottom: 30px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+}

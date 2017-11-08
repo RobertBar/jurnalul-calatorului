@@ -4,11 +4,10 @@
 
 // Panel
 
-%secion-default {
-  padding-top: em(35px);
-  padding-bottom: em(35px);
+%section-default {
+  padding: em(35px) em(20px);
   @include mq(medium) {
-    padding-bottom: em(50px);
+    padding: em(35px) em(0px) em(50px);
   }
 }
 
