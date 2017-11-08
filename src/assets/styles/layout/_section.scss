@@ -1,5 +1,5 @@
 .section {
-    @extend %secion-default;
+    @extend %section-default;
     @include m(padded){
         @extend %section-padding;
     }
@@ -9,5 +9,13 @@
 
     @include m(grey) {
         background-color: #f5f5f5;
+    }
+
+    @include m(dark-grey) {
+        background-color: #2d2d2d;
+        color: $white;
+        a{
+            color: $white;
+        }
     }
 }
