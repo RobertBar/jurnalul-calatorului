@@ -29,13 +29,16 @@
                 <nav class="col-xs-12 col-sm-8">
                     <ul class="nav">
                         <li class="nav__item">
-                            <a href="">Despre</a>
+                            <a href="#home" id="home-link">Home</a>
                         </li>
                         <li class="nav__item">
-                            <a href="">Testimoniale</a>
+                            <a href="#about" id="about-link">Despre</a>
                         </li>
                         <li class="nav__item">
-                            <a href="">Fii la curent</a>
+                            <a href="#testimonials" id="testimonials-link">Testimoniale</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#connected" id="connected-link">Fii la curent</a>
                         </li>
                     </ul>
                 </nav>
@@ -45,7 +48,7 @@
     <!-- End of header  -->
 
     <!-- Start of   -->
-    <section class="section--p-relative">
+    <section id="home" class="section--p-relative" data-matching-link="#home">
         <picture>
             <source srcset="assets/images/hero-area.bg.jpg 1200w" media="(min-width: 960px)">
                 <source srcset="assets/images/hero-area-bg-medium.jpg 600w" media="(min-width: 520px)">
@@ -61,7 +64,7 @@
     <!-- End of   -->
 
     <!-- Start of   -->
-    <section class="section section--extra-padded section--grey">
+    <section id="about" class="section section--extra-padded section--grey" data-matching-link="#about">
         <div class="container">
             <div class="row">
                 <h1 class="heading heading__primary col-xs-12 center-xs">Impartasesti usor</h1>
@@ -74,7 +77,7 @@
     <!-- End of   -->
 
     <!-- Start of   -->
-    <section class="section section--extra-padded">
+    <section id="testimonials" class="section section--extra-padded" data-matching-link="#testimonials">
         <div class="container">
             <div class="row">
                 <h1 class="col-xs-12 center-xs heading heading__primary">Conectat 24/7</h1>
@@ -128,7 +131,7 @@
     <!-- End of   -->
 
     <!-- Start of   -->
-    <section  class="section section--grey section--extra-padded">
+    <section  id="connected" class="section section--grey section--extra-padded" data-matching-link="#connected">
         <div class="container">
             <div class="row">
                 <h1 class="col-xs-12 center-xs heading heading__primary">Fii la curent</h1>
