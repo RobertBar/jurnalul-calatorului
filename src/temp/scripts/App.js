@@ -11088,112 +11088,162 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 
 /***/ }),
 /* 2 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__modules_MobileMenu__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__modules_SmoothScroll__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__modules_StickyHeader__ = __webpack_require__(6);
 
 
+var _jquery = __webpack_require__(0);
 
+var _jquery2 = _interopRequireDefault(_jquery);
 
+var _MenuOnMobile = __webpack_require__(3);
 
-var mobileMenu = new __WEBPACK_IMPORTED_MODULE_1__modules_MobileMenu__["a" /* default */]();
-var smoothScroll = new __WEBPACK_IMPORTED_MODULE_2__modules_SmoothScroll__["a" /* default */]();
-var stickyHeader = new __WEBPACK_IMPORTED_MODULE_3__modules_StickyHeader__["a" /* default */]();
+var _MenuOnMobile2 = _interopRequireDefault(_MenuOnMobile);
+
+var _SmoothScroll = __webpack_require__(4);
+
+var _SmoothScroll2 = _interopRequireDefault(_SmoothScroll);
+
+var _StickyHeader = __webpack_require__(6);
+
+var _StickyHeader2 = _interopRequireDefault(_StickyHeader);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var menuOnMobile = new _MenuOnMobile2.default();
+var smoothScroll = new _SmoothScroll2.default();
+var stickyHeader = new _StickyHeader2.default();
 
 /***/ }),
 /* 3 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
 
 
-class MobileMenu {
-    constructor() {
-        this.menuIcon = __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.menu-icon');
-        this.menuContent = __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.nav');
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var MenuOnMobile = function () {
+    function MenuOnMobile() {
+        _classCallCheck(this, MenuOnMobile);
+
+        this.menuIcon = (0, _jquery2.default)('.menu-icon');
+        this.menuContent = (0, _jquery2.default)('.nav');
         this.events();
     }
 
-    events() {
-        this.menuIcon.click(this.toggleMenu.bind(this));
-    }
+    _createClass(MenuOnMobile, [{
+        key: 'events',
+        value: function events() {
+            this.menuIcon.click(this.toggleMenu.bind(this));
+        }
+    }, {
+        key: 'toggleMenu',
+        value: function toggleMenu() {
+            this.menuContent.toggleClass("nav--is-visible");
+            this.menuIcon.toggleClass("menu-icon--close");
+        }
+    }]);
 
-    toggleMenu() {
-        this.menuContent.toggleClass("nav--is-visible");
-        this.menuIcon.toggleClass("menu-icon--close");
-    }
+    return MenuOnMobile;
+}();
 
-}
-
-/* harmony default export */ __webpack_exports__["a"] = (MobileMenu);
+exports.default = MenuOnMobile;
 
 /***/ }),
 /* 4 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_waypoints_lib_noframework_waypoints__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_waypoints_lib_noframework_waypoints___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__node_modules_waypoints_lib_noframework_waypoints__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery_smooth_scroll__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery_smooth_scroll___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_jquery_smooth_scroll__);
 
 
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-class SmoothScroll {
-    constructor() {
-        this.pageSections = __WEBPACK_IMPORTED_MODULE_0_jquery___default()('section');
-        this.headerLinks = __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.nav__item a');
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+var _noframework = __webpack_require__(1);
+
+var _noframework2 = _interopRequireDefault(_noframework);
+
+var _jquerySmoothScroll = __webpack_require__(5);
+
+var _jquerySmoothScroll2 = _interopRequireDefault(_jquerySmoothScroll);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var SmoothScroll = function () {
+    function SmoothScroll() {
+        _classCallCheck(this, SmoothScroll);
+
+        this.pageSections = (0, _jquery2.default)('section');
+        this.headerLinks = (0, _jquery2.default)('.nav__item a');
         this.createPageSectionWaypoints();
         this.addSmoothScrolling();
     }
 
-    addSmoothScrolling() {
-        this.headerLinks.smoothScroll();
-    }
+    _createClass(SmoothScroll, [{
+        key: 'addSmoothScrolling',
+        value: function addSmoothScrolling() {
+            this.headerLinks.smoothScroll();
+        }
+    }, {
+        key: 'createPageSectionWaypoints',
+        value: function createPageSectionWaypoints() {
+            var that = this;
+            this.pageSections.each(function () {
+                var currentPageSection = this;
+                new Waypoint({
+                    element: currentPageSection,
+                    handler: function handler(direction) {
+                        if (direction == "down") {
+                            var matchingHeaderLink = currentPageSection.getAttribute('data-matching-link');
+                            that.headerLinks.removeClass('is-current-link');
+                            (0, _jquery2.default)(matchingHeaderLink).addClass('is-current-link');
+                        }
+                    },
+                    offset: "16%"
+                });
 
-    createPageSectionWaypoints() {
-        var that = this;
-        this.pageSections.each(function () {
-            var currentPageSection = this;
-            new Waypoint({
-                element: currentPageSection,
-                handler: function (direction) {
-                    if (direction == "down") {
-                        var matchingHeaderLink = currentPageSection.getAttribute('data-matching-link');
-                        that.headerLinks.removeClass('is-current-link');
-                        __WEBPACK_IMPORTED_MODULE_0_jquery___default()(matchingHeaderLink).addClass('is-current-link');
-                    }
-                },
-                offset: "16%"
+                new Waypoint({
+                    element: currentPageSection,
+                    handler: function handler(direction) {
+                        if (direction == "up") {
+                            var matchingHeaderLink = currentPageSection.getAttribute('data-matching-link');
+                            that.headerLinks.removeClass('is-current-link');
+                            (0, _jquery2.default)(matchingHeaderLink).addClass('is-current-link');
+                        }
+                    },
+                    offset: "-40%"
+                });
             });
+        }
+    }]);
 
-            new Waypoint({
-                element: currentPageSection,
-                handler: function (direction) {
-                    if (direction == "up") {
-                        var matchingHeaderLink = currentPageSection.getAttribute('data-matching-link');
-                        that.headerLinks.removeClass('is-current-link');
-                        __WEBPACK_IMPORTED_MODULE_0_jquery___default()(matchingHeaderLink).addClass('is-current-link');
-                    }
-                },
-                offset: "-40%"
-            });
-        });
-    }
-}
+    return SmoothScroll;
+}();
 
-/* harmony default export */ __webpack_exports__["a"] = (SmoothScroll);
+exports.default = SmoothScroll;
 
 /***/ }),
 /* 5 */
@@ -11564,40 +11614,60 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 /***/ }),
 /* 6 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_waypoints_lib_noframework_waypoints__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_waypoints_lib_noframework_waypoints___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__node_modules_waypoints_lib_noframework_waypoints__);
 
 
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
 
-class StickyHeader {
-    constructor() {
-        this.siteHeader = __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.nav-bar');
-        this.headerTriggerElement = __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.nav-bar');
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+var _noframework = __webpack_require__(1);
+
+var _noframework2 = _interopRequireDefault(_noframework);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var StickyHeader = function () {
+    function StickyHeader() {
+        _classCallCheck(this, StickyHeader);
+
+        this.siteHeader = (0, _jquery2.default)('.nav-bar');
+        this.headerTriggerElement = (0, _jquery2.default)('.nav-bar');
         this.createHeaderWaypoint();
     }
 
-    createHeaderWaypoint() {
-        var that = this;
-        new Waypoint({
-            element: this.headerTriggerElement[0],
-            handler: function (direction) {
-                if (direction == "down") {
-                    that.siteHeader.addClass('nav-bar--full-darker');
-                } else {
-                    that.siteHeader.removeClass('nav-bar--full-darker');
+    _createClass(StickyHeader, [{
+        key: 'createHeaderWaypoint',
+        value: function createHeaderWaypoint() {
+            var that = this;
+            new Waypoint({
+                element: this.headerTriggerElement[0],
+                handler: function handler(direction) {
+                    if (direction == "down") {
+                        that.siteHeader.addClass('nav-bar--full-darker');
+                    } else {
+                        that.siteHeader.removeClass('nav-bar--full-darker');
+                    }
                 }
-            }
 
-        });
-    }
-}
+            });
+        }
+    }]);
 
-/* harmony default export */ __webpack_exports__["a"] = (StickyHeader);
+    return StickyHeader;
+}();
+
+exports.default = StickyHeader;
 
 /***/ })
 /******/ ]);
