@@ -44,9 +44,9 @@
         }
         @include m(ocupation) {
             margin: 0;
-            color: #646464;
+            color: #222;
             font-size: em(14px);
-            font-weight: $font-weight--thin;
+            font-weight: $font-weight--light;
         }
     }
     @include e(user-description) {
