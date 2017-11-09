@@ -1,0 +1,8 @@
+.footer {
+    @include e(info-col) {
+        @include mq(xs) {
+            margin-bottom: 40px;
+            // text-align: center;
+        }
+    }
+}
