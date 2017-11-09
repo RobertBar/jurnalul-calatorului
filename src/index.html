@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Jurnalul calatorului</title>
+    <title>Jurnalul călătorului</title>
     <link rel="stylesheet" href="temp/styles/styles.css">
 </head>
 
@@ -50,14 +50,18 @@
     <!-- Start of   -->
     <section id="home" class="section--p-relative" data-matching-link="#home-link">
         <picture>
+            <source srcset="assets/images/hero-area-bg-x-large.jpg 1800w" media="(min-width: 1600px)">
             <source srcset="assets/images/hero-area.bg.jpg 1200w" media="(min-width: 960px)">
-                <source srcset="assets/images/hero-area-bg-medium.jpg 600w" media="(min-width: 520px)">
+            <source srcset="assets/images/hero-area-bg-medium.jpg 600w" media="(min-width: 520px)">
             <img srcset="assets/images/hero-area-bg-small.jpg 400w" class="background__img">
         </picture>
         <div class="background__container container">
             <div class="row">
-                <h1 class="col-xs-12 center-xs heading heading__primary heading__primary--large">traieste. captureaza. trimite</h1>
-                <p class="col-xs-10 center-xs paragraph paragraph--lg-container paragraph--white">Acum e mai usor ca niciodata sa iti impartasesti momentele cu cei dragi</p>
+                <h1 class="col-xs-12 center-xs heading heading__primary heading__primary--large">trăiește. capturează. trimite</h1>
+                <p class=" center-xs paragraph paragraph--lg-container paragraph--white paragraph--heroarea">Acum e mai ușor ca niciodată să îți împărtășești momentele cu cei dragi</p>
+                <div class="col-xs-12 center-xs">
+                    <a href="" class="btn btn--large btn--hero">Află mai multe</a>
+                </div>
             </div>
         </div>
     </section>
@@ -67,10 +71,13 @@
     <section id="about" class="section section--extra-padded section--grey" data-matching-link="#about-link">
         <div class="container">
             <div class="row">
-                <h1 class="heading heading__primary col-xs-12 center-xs">Impartasesti usor</h1>
-                <p class="center-xs paragraph paragraph--md-container">Spre deosebire de celelalte platforme de bloging care iti limiteaza accesul sau face procesul sa fie greoi.
-                    J.A. iti ofere o alternative mai performanta si mai prietenoasa!</p>
-                <p class="center-xs paragraph paragraph--md-container">Totul e foarte simplu. Te loghezi in aplicatie, creezi postul dorit si il publici.</p>
+                <h1 class="heading heading__primary col-xs-12 center-xs">Împărtășești ușor</h1>
+                <p class="center-xs paragraph paragraph--md-container">Spre deosebire de celelalte platforme de bloging care îți limitează accesul sau face procesul să fie greoi.
+                    J.A. îți oferă o alternativă mai performantă și mai prietenoasă!</p>
+                <p class="center-xs paragraph paragraph--md-container">Totul e foarte simplu. Te loghezi în aplicatie, creezi postul dorit și îl publici.</p>
+                <div class="col-xs-12 center-xs">
+                    <a href="" class="btn btn--large btn--gold btn--about">Începe acum</a>
+                </div>
             </div>
         </div>
     </section>
@@ -81,7 +88,7 @@
         <div class="container">
             <div class="row">
                 <h1 class="col-xs-12 center-xs heading heading__primary">Conectat 24/7</h1>
-                <p class="center-xs paragraph paragraph--md-container">Nu conteaza unde mergi, singura limitare e conexiunea internetului. Cat timp esti in calatorie, fii aproape
+                <p class="center-xs paragraph paragraph--md-container">Nu contează unde mergi, singura limitare e conexiunea internetului. Căt timp ești în călătorie, fii aproape
                     de cei dragi.</p>
 
                 <div class="testimonial row">
@@ -91,7 +98,7 @@
                         </div>
                         <div class="testimonial__user-details">
                             <h2 class="testimonial__user-details--name">Popescu Raul</h2>
-                            <h3 class="testimonial__user-details--ocupation">calator, Hunedoara</h3>
+                            <h3 class="testimonial__user-details--ocupation">programator - Arad</h3>
                         </div>
                         <div class="testimonial__user-description">
                             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur cupiditate tenetur non quibusdam
@@ -103,8 +110,8 @@
                             <img src="/assets/images/user-2.jpg" alt="">
                         </div>
                         <div class="testimonial__user-details">
-                            <h2 class="testimonial__user-details--name">Popescu Raul</h2>
-                            <h3 class="testimonial__user-details--ocupation">calator, Hunedoara</h3>
+                            <h2 class="testimonial__user-details--name">Andrei Burcuș</h2>
+                            <h3 class="testimonial__user-details--ocupation">Asistent medical - Cluj</h3>
                         </div>
                         <div class="testimonial__user-description">
                             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur cupiditate tenetur non quibusdam
@@ -116,8 +123,8 @@
                             <img src="/assets/images/user-3.jpg" alt="">
                         </div>
                         <div class="testimonial__user-details">
-                            <h2 class="testimonial__user-details--name">Popescu Raul</h2>
-                            <h3 class="testimonial__user-details--ocupation">calator, Hunedoara</h3>
+                            <h2 class="testimonial__user-details--name">Staicu Alexandru</h2>
+                            <h3 class="testimonial__user-details--ocupation">General aviație - Petrila</h3>
                         </div>
                         <div class="testimonial__user-description">
                             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur cupiditate tenetur non quibusdam
@@ -137,7 +144,7 @@
                 <h1 class="col-xs-12 center-xs heading heading__primary">Fii la curent</h1>
                 <form class="col-xs-12 center-xs form" action="">
                     <input class="form__input"type="email" placeholder="Adresa e-mail">
-                    <input class="btn btn--large btn--form-news"type="button" value="Confirma">
+                    <input class="btn btn--large btn--gold"type="button" value="Confirmă">
                 </form>
             </div>
         </div>
@@ -145,7 +152,7 @@
     <!-- End of   -->
 
     <!-- Start of footer  -->
-    <footer class="section section--footer section--dark-grey">
+    <footer class="footer section section--footer section--dark-grey">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-md-3">
@@ -155,24 +162,24 @@
                 </div>
                 <div class="col-xs-12 col-md-9">
                     <div class="row">
-                        <div class="col-xs-12 col-md-6">
+                        <div class="footer__info-col col-xs-12 col-md-6">
                             <h3 class="heading">Despre</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id non, expedita, officia voluptas error
                                 quo fugiat quidem ex amet eaque odit, possimus dolorum inventore.</p>
                         </div>
-                        <div class="col-xs-12 col-sm-6 col-md-offset-1 col-md-3">
+                        <div class="footer__info-col col-xs-12 col-sm-6 col-md-offset-1 col-md-3">
                             <h3 class="heading">Suport</h3>
                             <ul>
                                 <li>
                                     <a href="">F.A.Q</a>
                                 </li>
                                 <li>
-                                    <a href="">Contaceaza-ne</a>
+                                    <a href="">Termeni și condiții</a>
                                 </li>
                             </ul>
                         </div>
-                        <div class="col-xs-12 col-sm-6 col-md-2">
-                            <h3 class="heading">Contecteaza-ne</h3>
+                        <div class="footer__info-col col-xs-12 col-sm-6 col-md-2 ">
+                            <h3 class="heading">Contectează-ne</h3>
                             <ul>
                                 <li>
                                     <a href="">Facebook</a>
